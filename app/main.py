@@ -5,6 +5,7 @@ from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
+from fastapi.responses import RedirectResponse
 
 from app.db import init_db
 from app.deps import get_vector_store
@@ -21,3 +22,9 @@ async def lifespan(_: FastAPI) -> AsyncIterator[None]:
 app = FastAPI(title="Palm Mind RAG Backend", version="1.0.0", lifespan=lifespan)
 app.include_router(ingestion.router)
 app.include_router(chat.router)
+
+
+@app.get("/", include_in_schema=False)
+def root() -> RedirectResponse:
+    """Send visitors of the bare address to the interactive test page."""
+    return RedirectResponse(url="/docs")
