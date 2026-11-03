@@ -5,3 +5,6 @@ __pycache__/
 app.db
 qdrant_data/
 .pytest_cache/
+test.db
+test_qdrant/
+*.mp4
