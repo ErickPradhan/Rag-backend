@@ -7,7 +7,7 @@ A FastAPI backend with two REST APIs:
 
 No FAISS, no Chroma, no UI.
 
-**Demo video:** _add your link here_
+**Demo video:** https://drive.google.com/drive/folders/1yQlQKQhcExe8A00pcxaIQTY4OP6J2Gnr?usp=drive_link
 
 ---
 
