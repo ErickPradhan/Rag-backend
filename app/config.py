@@ -12,7 +12,7 @@ class Settings(BaseSettings):
     # LLM + embeddings (any OpenAI-compatible provider)
     llm_api_key: str
     llm_base_url: str = "https://generativelanguage.googleapis.com/v1beta/openai/"
-    llm_model: str = "gemini-2.5-flash"
+    llm_model: str = "gemini-3.5-flash"
     embedding_model: str = "gemini-embedding-001"
     embedding_dim: int = 768
 
